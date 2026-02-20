@@ -129,7 +129,7 @@ export default function Projects() {
                 onMouseLeave={handleMouseLeave}
                 onMouseUp={handleMouseUp}
                 onMouseMove={handleMouseMove}
-                className="w-full overflow-x-auto pb-12 pt-4 px-6 md:px-20 no-scrollbar flex gap-8 items-center cursor-grab active:cursor-grabbing"
+                className="w-full overflow-x-auto pb-12 pt-4 px-4 md:px-20 no-scrollbar flex gap-4 md:gap-8 items-center cursor-grab active:cursor-grabbing snap-x snap-mandatory"
             >
                 {projects.map((project, index) => (
                     <motion.div
@@ -138,7 +138,7 @@ export default function Projects() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                         whileHover={{ scale: 1.02, y: -10 }}
-                        className="snap-center shrink-0 w-[85vw] md:w-[600px] h-[600px] relative rounded-[2rem] overflow-hidden border border-white/40 bg-white/30 backdrop-blur-xl shadow-xl group cursor-pointer"
+                        className="snap-center shrink-0 w-[78vw] md:w-[600px] h-[580px] md:h-[600px] relative rounded-[2rem] overflow-hidden border border-white/40 bg-white/30 backdrop-blur-xl shadow-xl group cursor-pointer"
                     >
                         {/* Project Preview (Image) */}
                         <div className="h-[40%] w-full relative overflow-hidden bg-gray-100">
@@ -151,12 +151,12 @@ export default function Projects() {
                         </div>
 
                         {/* Content */}
-                        <div className="h-[60%] p-8 flex flex-col justify-between relative bg-white/40">
+                        <div className="h-[60%] p-5 md:p-8 flex flex-col justify-between relative bg-white/40">
                             <div>
                                 <span className="text-sm font-bold tracking-widest text-gray-500 uppercase mb-2 block">
                                     {project.category}
                                 </span>
-                                <h3 className="text-3xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors">
+                                <h3 className="text-xl md:text-3xl font-bold text-gray-800 mb-2 md:mb-3 group-hover:text-blue-600 transition-colors leading-tight">
                                     {project.title}
                                 </h3>
                                 <p className="text-gray-600 leading-relaxed mb-6 line-clamp-5">

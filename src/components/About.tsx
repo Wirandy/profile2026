@@ -14,7 +14,7 @@ export default function About() {
                 style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
             </div>
 
-            <div className="w-full max-w-7xl min-h-[80vh] relative flex flex-col md:block items-center justify-center gap-8 py-10 md:py-0" ref={constraintsRef}>
+            <div className="w-full max-w-7xl min-h-[80vh] relative flex flex-col md:block items-center justify-center gap-6 py-10 md:py-0" ref={constraintsRef}>
 
                 {/* Heading (Floating) - Static on Mobile, Absolute on Desktop */}
                 <div className="relative md:absolute md:top-0 md:left-1/2 md:-translate-x-1/2 z-0 text-center pointer-events-none mb-8 md:mb-0">
@@ -95,16 +95,16 @@ export default function About() {
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
-                    className="relative md:absolute md:right-[50%] md:translate-x-1/2 md:bottom-10 w-auto min-w-[200px] bg-[#1a1a1a]/90 backdrop-blur-lg border border-gray-700 rounded-2xl p-6 shadow-2xl cursor-grab active:cursor-grabbing text-white"
+                    className="relative md:absolute md:right-[50%] md:translate-x-1/2 md:bottom-10 w-full md:w-auto min-w-[200px] bg-[#1a1a1a]/90 backdrop-blur-lg border border-gray-700 rounded-2xl p-6 shadow-2xl cursor-grab active:cursor-grabbing text-white"
                 >
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-row md:flex-col gap-6 md:gap-4 items-center md:items-start justify-around md:justify-start">
                         <div className="flex items-center gap-3">
                             <div>
                                 <div className="text-2xl font-bold">10+</div>
                                 <div className="text-xs text-gray-400 uppercase tracking-wider">Projects</div>
                             </div>
                         </div>
-                        <div className="w-full h-px bg-gray-700"></div>
+                        <div className="w-px md:w-full h-8 md:h-px bg-gray-700"></div>
                         <div className="flex items-center gap-3">
                             <div>
                                 <div className="text-2xl font-bold">2+</div>

@@ -79,13 +79,22 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden bg-white/95 backdrop-blur-md shadow-lg absolute w-full top-full left-0 mt-2 rounded-b-2xl border-t border-gray-100">
-                    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <div className="md:hidden bg-white shadow-2xl fixed w-full top-0 left-0 h-screen z-50 flex flex-col items-center justify-center">
+                    {/* Close Button */}
+                    <button
+                        onClick={() => setIsOpen(false)}
+                        className="absolute top-6 right-6 p-2 rounded-full text-gray-800 hover:text-cyan-600 hover:bg-gray-100 transition-colors"
+                    >
+                        <svg className="h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <div className="flex flex-col items-center space-y-8">
                         {navLinks.map((item) => (
                             <Link
                                 key={item.name}
                                 href={item.href}
-                                className="text-black hover:text-blue-600 block px-3 py-2 text-sm font-medium uppercase tracking-wider"
+                                className="text-black hover:text-cyan-600 block text-2xl font-bold uppercase tracking-wider transition-colors"
                                 onClick={() => setIsOpen(false)}
                             >
                                 {item.name}
