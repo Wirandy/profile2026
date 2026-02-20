@@ -21,7 +21,7 @@ const patrickHand = Patrick_Hand({
   display: 'swap',
 })
 
-import WaterCursor from '@/components/WaterCursor';
+
 
 export const metadata: Metadata = {
   title: 'Web3 Developer Portfolio',
